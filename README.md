@@ -1,4 +1,4 @@
-##Parthenon: Threat Intellignece Sharing Using Splunk
+##Parthenon: Threat Intelligence Sharing Using Splunk
 
 ###Introduction:
 

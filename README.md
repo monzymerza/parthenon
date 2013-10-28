@@ -51,7 +51,7 @@ Selected search indexes: parthenon
 
 Click on Save. 
 
-2.d. Creating User Accounts
+###Creating User Accounts
 
 Create individual accounts for the collaborators to submit threat data and retrieve threat information. From the Web UI go to:
 Manager > Access Controls > Users > New 

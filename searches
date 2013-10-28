@@ -1,0 +1,5 @@
+index=_internal /services/receivers/simple? source=*/splunkd_access.log  | convert timeformat=%d/%M/%Y:%H:%M:%S
+[search index=_internal /services/receivers/simple? source=*/splunkd_access.log  | bucket _time span=1s| table _time]
+index=doe | bucket _time span=1s | join _time [search index=_internal /services/receivers/simple? source=*/splunkd_access.log | bucket _time span=1s] | table user _raw
+
+index=doe | bucket _time span=1s | join _time [search index=_internal /services/receivers/simple? source=*/splunkd_access.log | bucket _time span=1s] | strcat "user=" user " " _raw mf | table mf | collect index=main

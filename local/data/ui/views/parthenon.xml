@@ -1,0 +1,80 @@
+  <form>
+  <label>Collaborators</label>
+  <fieldset autoRun="true">
+       <input type="dropdown" token="index">
+           <label>Project Name (index)</label>
+           <suffix>*</suffix>
+           <populatingSearch fieldForValue="index" fieldForLabel="index" earliest="-4h">| eventcount summarize=false report_size=true index=* | dedup index | table index | sort -index</populatingSearch>
+       </input>
+      <input type="time" />
+  </fieldset>
+
+      
+  <row>
+      <single>
+          <title>Total Submissions</title>
+          <searchTemplate>`parthenon_total_submission($index$)`</searchTemplate>
+      </single>
+      <single>
+          <title>Bad Actors on Record</title>
+          <searchTemplate>`parthenon_distinct_actors($index$)`</searchTemplate>
+      </single>
+      <single>
+          <title>MD5Sums on Record</title>
+          <searchTemplate>`parthenon_distinct_md5sums($index$)`</searchTemplate>
+      </single>
+  </row>
+  
+  <row>
+      <chart>
+      <searchTemplate>`parthenon_submissions_by_user($index$)`</searchTemplate>
+      <title>Submission Rate</title>
+      <option name="charting.chart">area</option>
+      <option name="charting.chart.nullValueMode">gaps</option>
+      <option name="charting.chart.stackMode">default</option>
+      <option name="charting.layout.splitSeries">false</option>
+      <option name="charting.legend.placement">right</option>
+      <option name="count">10</option>
+      <option name="displayRowNumbers">true</option>
+    </chart>
+  	<chart>
+      <title>Retrievals Rate</title>
+      <searchTemplate>`parthenon_retrieval_rate_by_user($index$)`</searchTemplate>
+      <option name="charting.chart">area</option>
+    </chart>    
+  </row>
+  <row>
+      <table>
+      <searchTemplate>`parthenon_Users_Mode_Unique_Requests`</searchTemplate>
+      <title>Retrievals</title>
+      <option name="showPager">true</option>
+      <option name="count">10</option>
+      <option name="displayRowNumbers">true</option>
+    </table>
+    <table>
+      <searchTemplate>`parthenon_submissions_by_user_host`</searchTemplate>
+      <title>Submissions</title>
+      <option name="count">10</option>
+      <option name="displayRowNumbers">true</option>
+      <option name="showPager">true</option>
+    </table>
+  </row>
+</form> 	  
+    
+ <!-- OLD PAGE
+
+  <row>
+    <table>
+      <searchName>parthenon Users Mode UNique Requests</searchName>
+      <title>Retrievals</title>
+      <option name="count">10</option>
+      <option name="displayRowNumbers">true</option>
+    </table>
+    <table>
+      <searchName>parthenon submissions by user host</searchName>
+      <title>Submissions</title>
+      <option name="count">10</option>
+      <option name="displayRowNumbers">true</option>
+    </table>
+  </row>
+-->

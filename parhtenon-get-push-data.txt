@@ -1,0 +1,17 @@
+# post some data
+curl -k -u part:part -d "md5sum=1756f939a1a623c8547daf0c8ac897fa comment='second stage dropper for a persistent attacker' sourceurl=reallybadsite.com" "https://localhost:8089/services/receivers/simple?index=parthenon&sourcetype=threat"
+
+# kick off a search
+1363478110.139
+
+curl -u part:part -k 'https://localhost:8089/services/search/jobs' -d 'search=search md5sum' 
+
+# submit a search and get the jobid
+jobid=`curl -s -u part:part -k 'https://localhost:8089/services/search/jobs' --data-urlencode 'search=search index=parthenon earliest=@d | stats count by host' | grep -o "\([0-9]\+\.[0-9]\{3\}\)"`
+# in case the search takes a while
+sleep 3
+# get results of a job
+curl -u part:part -k https://localhost:8089/services/search/jobs/$jobid/results/ --get -d output_mode=csv
+
+# submit a search and get the results
+curl -s -u part:part -k 'https://localhost:8089/services/search/jobs' --data-urlencode 'search=search index=parthenon earliest=@d | stats count by host' -d exec_mode=oneshot -d output_mode=csv

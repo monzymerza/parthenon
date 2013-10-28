@@ -72,12 +72,13 @@ Confirm password
 Threat data is submitted via a POST request. The request must contain an actor field or a md5sum field and optionally, any number of optional fields e.g. a comment field. Fields and values are represented as key=value pairs. The actor field can be a domain name or an IP address. Since submissions are made via an HTTP post, they can be made via curl or some python script.
 
 Example 1:
-curl -k -u monzy:monzypass -d "actor=www.monzyerza.com comment='This domain has been scanning for quite some time. Block immediately'" "https://localhost:8089/services/receivers/simple?index=parthenon&sourcetype=threat"
+
+    curl -k -u monzy:monzypass -d "actor=www.monzyerza.com comment='This domain has been scanning for quite some time. Block immediately'" "https://localhost:8089/services/receivers/simple?index=parthenon&sourcetype=threat"
 
 In this example, we submit the actor www.monzymerza with a comment. Notice that the comment is surrounded by a single quote.
 
 Example 2: 
-curl -k -u monzy:monzypass -d "md5sum=1756f939a1a623c8547daf0c8ac897fa comment='second stage dropper for a persistent attacker' sourceurl=reallybadsite.com" "https://localhost:8089/services/receivers/simple?index=parthenon&sourcetype=threat"
+    curl -k -u monzy:monzypass -d "md5sum=1756f939a1a623c8547daf0c8ac897fa comment='second stage dropper for a persistent attacker' sourceurl=reallybadsite.com" "https://localhost:8089/services/receivers/simple?index=parthenon&sourcetype=threat"
 
 In this example, we submit an md5sum and an accompanying comment. but we also include a sourceurl field to specify the source url for the malware. 
 
@@ -87,8 +88,8 @@ The threats are retrieved by way of a Splunk search. The output can be received 
 
 In this linux example, we download all the threat intel that was uploaded today. 
 
-# submit a search and get the search results
-curl -s -u part:part -k 'https://localhost:8089/services/search/jobs' --data-urlencode 'search=search index=parthenon earliest=@d' -d exec_mode=oneshot -d output_mode=csv
+Submit a search and get the search results
+    curl -s -u part:part -k 'https://localhost:8089/services/search/jobs' --data-urlencode 'search=search index=parthenon earliest=@d' -d exec_mode=oneshot -d output_mode=csv
 
 5. Dasboards and Alerts
 

@@ -1,10 +1,10 @@
-Parthenon: Threat Intellignece Sharing Using Splunk
+#Parthenon: Threat Intellignece Sharing Using Splunk
 
-Introduction:
+##Introduction:
 
 Threat intelligence sharing is a difficult task for organizations. Information is hard to compile and maintain and its difficult to disseminate or acquire information in a timely fashion. We demonstrate an intelligence sharing solution; Parthenon. It is completely contained within the Splunk platform. Parthenon allows for intelligence sharing and retrieval through Splunk's REST API. All access controls are implemented using Splunk's access model. And since Splunk is a robust, big data platform, Parthenon data can be stored and analyzed indefinitely. Parthenon includes visualizations and automated alerts for actionable intelligence.
 
-1. Description:
+##Description:
 
 Analysts acquire threat intelligence in the course of incident response and forensics activities. But due to the cumbersome nature of intelligence sharing, much information goes unshared and unreported. We wanted to have the simplest possible mechanism so maintenance, sharing and retrieval would be as painless as possible.Using SSL over HTTP as the mechanism for all submissions and acquisitions, analysts can use anything from a web browser to home-grown applications for interactions.
 

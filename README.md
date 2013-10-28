@@ -33,21 +33,21 @@ Restart Splunk: $SPLUNK_HOME/bin/splunk restart
 
 Once the App is installed. Create a role for all users of Parthenon. From the Web UI, go to Manager > Access Controls > Roles > New
 Add New
-Role Name : Parthenon
-Default App: Parthenon
-Search Restrictions
-Restrict search terms: index=parthenon
-Restrict search time range: 86400 , or one day
-Limit concurrent search jobs: 3
-Limit concurrent real-time search jobs: 0
-Limit total jobs disk quota: <leave blank>
-Inheritance
-Available Roles: admin
-Capabilities: edit_tcp, output_file, search
-Indexes searched by default
-Selected indexes: parthenon
-Indexes
-Selected search indexes: parthenon
+    Role Name : Parthenon
+    Default App: Parthenon
+    Search Restrictions
+    Restrict search terms: index=parthenon
+    Restrict search time range: 86400 , or one day
+    Limit concurrent search jobs: 3
+    Limit concurrent real-time search jobs: 0
+    Limit total jobs disk quota: <leave blank>
+    Inheritance
+    Available Roles: admin
+    Capabilities: edit_tcp, output_file, search
+    Indexes searched by default
+    Selected indexes: parthenon
+    Indexes
+    Selected search indexes: parthenon
 
 Click on Save. 
 

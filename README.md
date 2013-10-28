@@ -33,6 +33,7 @@ Restart Splunk: $SPLUNK_HOME/bin/splunk restart
 
 Once the App is installed. Create a role for all users of Parthenon. From the Web UI, go to Manager > Access Controls > Roles > New
 Add New
+
     Role Name : Parthenon
     Default App: Parthenon
     Search Restrictions

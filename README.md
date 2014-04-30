@@ -12,7 +12,7 @@ Submissions are made using the Splunk REST API with a predefined syntax. The sub
 
 Status dashboards and Visualizations allow Parthenon administrators and contributors to keep track of submissions and acquisitions. The dashboards also provide insight into additional information and third party enrichments. Enrichments are also used to identify high profile data e.g. domains that might be on the Alexa top 1000 list. In addition, participants can subscribe to real-time, automated updates. E.g. if Alice adds a malicious domain to Parthenon, Bob can be automatically notified of the update and the contents of the update. (Section 5 describes visualizations, enrichments and alerts)
 
-Because Parthenon is designed to be a multi-user/multi-party collaboration system, there is some setup required to create user accounts with appropriate permissions. Details of this setup are discussed in section 2.
+Because Parthenon is designed to be a multi-user/multi-party collaboration system, there is some setup required to create user accounts with appropriate permissions. Details of this setup are discussed in the section 'Creating a new role'.
 
 ###Installation via the command line:
 

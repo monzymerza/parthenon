@@ -14,14 +14,6 @@ Status dashboards and Visualizations allow Parthenon administrators and contribu
 
 Because Parthenon is designed to be a multi-user/multi-party collaboration system, there is some setup required to create user accounts with appropriate permissions. Details of this setup are discussed in section 2.
 
-###Parthenon Installation and Setup:
-
-Parthenon is a Splunk app. It can be installed just like any other Splunk app; either via the Web UI or via the command line. 
-
-###Installation via the Web UI: 
-
-Navigate to Manager >> Apps >> Find More Apps Online. Search for Parthenon in the searh bar (top right). Click on Install Free. 
-
 ###Installation via the command line:
 
 Download the Parthenon package from this GitHub page by clicking on the 'Download Zip' link. Once downloaded, extracted the zip archive. This will produce a folder named 'parthenon-master'. 

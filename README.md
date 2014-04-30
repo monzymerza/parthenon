@@ -24,9 +24,9 @@ Navigate to Manager >> Apps >> Find More Apps Online. Search for Parthenon in th
 
 ###Installation via the command line:
 
-Download the Parthenon package from SplunkBase; www.splunkbase.com . Rename the parthenon.spl file to parthenon.tgz. Unpack the tar archive. On a linux system, you can type: tar -vxzf parthenon.tgz . On a windows system, you can download something like 7-zip to unpack the tar archive.
+Download the Parthenon package from this GitHub page by clicking on the 'Download Zip' link. Once downloaded, extracted the zip archive. This will produce a folder named 'parthenon-master'. 
 
-Once unpacked, move the entire directory, parthenon, into $SPLUNK_HOME/etc/apps/ . 
+Once unpacked, move the entire directory, parthenon-master, into $SPLUNK_HOME/etc/apps/ . e.g. for most linux installs this wil be the /opt/splunk/etc/apps directory.
 Restart Splunk: $SPLUNK_HOME/bin/splunk restart
 
 ###Creating a new role:
